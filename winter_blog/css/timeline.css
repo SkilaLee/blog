@@ -1,0 +1,40 @@
+#timeline li {
+	background: #68e7e0;
+	margin-right: 2%;
+	overflow: auto;
+	margin-bottom: 0;
+	margin-left: -5%;
+}
+.container {
+	background: #c2edf4;
+	overflow: auto;
+}
+.thumb {
+	float: left;
+	padding: 6% 3.5% 3.5% 3.5%;
+}
+.check {
+	float: left;
+	width: 0px;
+	height: 0px;
+	margin: 6.5% 0% 3.5% -14px;
+	border-top: 10px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 15px solid rgb(26, 203, 116);
+	border-left: 4px solid transparent;
+}
+.timeline_content {
+	margin: 3% 2% 3% 34%;
+	border: 3px solid rgb(26, 203, 116);	
+}
+.timeline_content h3 {
+	margin-left: 40px;
+}
+.timeline_content p {
+	display: none;
+	padding-left: 13%;
+}
+.timeline_content a {
+	float: right;
+	margin-right: 2%;
+}

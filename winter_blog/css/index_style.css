@@ -1,0 +1,192 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #d3dfee;
+}
+h1 {
+	color: #fff;
+}
+li {
+	list-style: none;
+}
+#header_right input {
+	color: #da44ec;
+}
+a {
+	text-decoration: none;
+}
+#main {
+/*	opacity:0.4;
+filter:alpha(opacity=40); */
+	width: 80%;
+	background: #99d9ea;
+	margin-left: 10%;	
+	border: 2px solid #000;
+}
+#header_out {
+	border: 1px solid #000;
+}
+#header {
+	margin: 10px;
+	background: #0d3689;
+	height: 80.875px;
+}
+#header a {
+	color: #1DCF33;
+}
+#header_left {
+	width: 40%;
+	float: left;
+	margin-left: 5%;
+}
+#header_right {
+	float: right;
+}
+#header_right li {	
+	list-style: none;
+	float: right;
+	margin-right: 10px;
+	margin-top: 25px;
+	background: #372b63;
+	padding: 5px;
+	text-align: center;
+}
+
+#header_right img {
+	width: 70px;
+	height: 65px;
+	float: right;
+	margin-top: 9px;
+	margin-right: 10px;
+}
+#body {
+	overflow: auto;
+}
+#search {
+	float: right;
+	margin: 25px;
+}
+#body_left {
+	float: left;
+	width: 20%;
+}
+#body_left li {
+	margin: 10% 15%;
+	list-style: none;
+	margin-top: 5px;
+	text-align: center;
+	border: 1px solid;
+}
+.body_right {
+	float: left;
+	width: 55%;
+	overflow: auto;
+}
+.style {
+	list-style: none;
+	display: block;
+	float: right;
+	margin-bottom: 5px;
+}
+.write {
+	overflow: auto;
+} 
+.form-control {
+	display: block;
+	width: 82%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+textarea {
+
+}
+.sublime {
+	float: right;
+	margin: 10px;
+}
+.journal,.journ {
+	border: 1px solid #0d3689;
+	overflow: auto;
+	display: none;
+}
+.jour {
+	border: 1px solid #0d3689;
+	overflow: auto;
+}
+.content {
+	margin-left: 7%;
+}
+.time {
+	width: 96%;
+	margin: 0 1%;
+}
+.reply {
+	border: 1px solid #163473;
+	width: 100%;
+	overflow: auto;
+}
+
+.discu {
+	margin-left: 45px;
+	display: none;
+}
+.reply_sub {
+	display: none;
+	float: right;
+}
+.time a {
+	width: 38px;
+}
+.reply a,.span {
+	float: right;
+}
+.span span {
+	float: right;
+}
+
+.huifu {
+	margin-left: 5.4%;
+	border: 1px solid #7F8DAB;
+	width: 94%;
+	overflow: auto;
+}
+
+.reply p {
+	overflow: auto;
+	width: 100%;
+}
+
+
+
+#footer {
+	margin-left: 45%;
+}
+#login,#regi {
+	display: none;
+	width: 30%;
+	height: 200px;
+	background: #6689b4;
+	border: 1px solid #17375e;
+	margin-left: 36.5%;
+	margin-top: 100px;
+/*	padding-top: 5%;
+*/}
+#login td,#regi td {
+	padding-bottom: 8%;
+}
+.log input {
+	width: 75px;
+	height: 35px;
+	background: #3b8aeb;
+	margin-right: 25px;
+}
+#login a,#regi a {
+	float: right;
+}
+hr {
+	margin: 40px 0px;
+}

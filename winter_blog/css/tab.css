@@ -1,0 +1,33 @@
+#div1 .active {
+	background: #0def82;
+}
+#div2 .active {
+	background: #0def82;
+}
+#div1 input,#div2 input {
+	background: #95a8dc;
+	width: 100px;
+	height: 45px;
+	margin: 0px 21px;
+}
+
+#body_left .active {
+	background: rgb(46, 208, 196);
+}
+.body_right {
+	display: none;
+	margin-top: 25px;
+}
+.body_right2 {
+	margin-top: 25px;
+	width: 75%;
+	margin-left: 2%;
+	float: left;
+}
+#log {
+	border: 1px solid #644664;
+	padding: 2%;
+}
+#log h3 {
+	text-align: center;
+}
