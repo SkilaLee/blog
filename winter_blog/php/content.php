@@ -127,48 +127,59 @@
 	<link rel="stylesheet" href="../css/index_style.css">
 	<link rel="stylesheet" href="../css/tab.css">
 	<link rel="stylesheet" href="../css/timeline.css">
-	<!-- // <script type="text/javascript" src="../js/tab.js"></script> -->
-
-</head>
-<div class="bdsharebuttonbox" data-tag="share_1">
-  <a class="bds_mshare" data-cmd="mshare"></a>
-  <a class="bds_qzone" data-cmd="qzone" href="#"></a>
-  <a class="bds_tsina" data-cmd="tsina"></a>
-  <a class="bds_baidu" data-cmd="baidu"></a>
-  <a class="bds_renren" data-cmd="renren"></a>
-  <a class="bds_tqq" data-cmd="tqq"></a>
-  <a class="bds_more" data-cmd="more">更多</a>
-  <a class="bds_count" data-cmd="count"></a>
-</div>
 <script>
-  window._bd_share_config = {
-    common : {
-      bdText : '自定义分享内容', 
-      bdDesc : '自定义分享摘要', 
-      bdUrl : '自定义分享url地址',   
-      bdPic : '自定义分享图片'
-    },
-    share : [{
-      "bdSize" : 16
-    }],
-    slide : [{     
-      bdImg : 0,
-      bdPos : "right",
-      bdTop : 100
-    }],
-    image : [{
-      viewType : 'list',
-      viewPos : 'top',
-      viewColor : 'black',
-      viewSize : '16',
-      viewList : ['qzone','tsina','huaban','tqq','renren']
-    }],
-    selectShare : [{
-      "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
-    }]
+  window.onload=function()
+  {
+    
+  var Index,
+    pinglun = document.getElementsByClassName("ping"),
+    Input = document.getElementsByClassName("discu");
+  //为每个被点击的对象绑定单击事件
+  for( var i = 0; i < pinglun.length; i++ ){
+    (function( i ){
+      pinglun[i].onclick = function(){
+        //为被点击的时间点li添加active类
+        Input[i].style.display = "block";
+
+        //根据索引号变量的值，去除上一个li的active类
+        Input[Index].style.display = "none";
+
+        //将索引号变量值更新为被点击的li的索引号
+        Index = i;
+      };
+    })( i );
   }
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+  var index,
+    reply = document.getElementsByClassName("hui"),
+    InputRe = document.getElementsByClassName("reply_sub");
+  //为每个被点击的对象绑定单击事件
+  for( var i = 0; i < reply.length; i++ ){
+    (function( i ){
+      reply[i].onclick = function(){
+        //为被点击的时间点li添加active类
+        InputRe[i].style.display = "block";
+
+        //根据索引号变量的值，去除上一个li的active类
+        InputRe[index].style.display = "none";
+
+        //将索引号变量值更新为被点击的li的索引号
+        index = i;
+      };
+    })( i );
+  }
+
+
+
+
+
+
+
+  };
+
+
 </script>
+</head>
+
 <body>
 
 <div id="main">
@@ -190,9 +201,9 @@
 	<div id="body">
 		<div id="body_left">
 			<ul style="display:none;">
-			<li class="active">主页</li>
+			<li>主页</li>
 			<li>写日志</li>
-			<li>日志管理</li>
+			<li class="active">日志管理</li>
 			<li>好友博客</li>
 			<li>访问统计</li>
 			<li>博客设计</li>
@@ -204,7 +215,7 @@
 				<?php 
 					$result = $db->query("SELECT * FROM `blog_content` WHERE `content_id` = '$content_id'");
 					foreach ($result as $value) {   
-						print("<h3>{$value['content_title']}</h3>
+						print("<p>{$value['user_name']}:</p> <h3>{$value['content_title']}</h3>
 							<p id='p'>");
 					    $content1=$value['content'];   
 					    $current=$_REQUEST['page_t']; 
@@ -214,9 +225,9 @@
                 </div>
     </div>
     <div id='search'>
+    <div id='sear'>
       <input type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
-        <button type='submit' class='btn btn-default'>Submit</button>");
-
+      <button type='submit' class='btn btn-default'>Submit</button></div>");
           $content_id=$value['content_id'];
             $content=$value['content'];
               echo <<<STR
@@ -236,7 +247,7 @@ STR;
                 <p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
 STR;
               if ($user_id==$value1['user_id']) {
-                print("<a href='php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
+                print("<a href='delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
               }
                 echo <<<STR
               <a class="hui" href="#reply">回复</a></span>

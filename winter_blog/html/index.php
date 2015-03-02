@@ -25,29 +25,7 @@
 	<script type="text/javascript" src="../js/tab.js"></script>
 </head>
 <body>
-	<!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_32x32">
-<a class="jiathis_button_qzone"></a>
-<a class="jiathis_button_tsina"></a>
-<a class="jiathis_button_tqq"></a>
-<a class="jiathis_button_weixin"></a>
-<a class="jiathis_button_renren"></a>
-<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-var jiathis_config={
-	url:"www.baidu.com",
-	summary:"你好啊啊啊啊啊",
-	title:"啦啦啦 #xx.blog#",
-	shortUrl:false,
-	hideMore:false;
-}
-
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
+	
 
 <div id="main">
 	<div id="header_out">
@@ -805,8 +783,10 @@ STR;
 			第七段<p>ndidjsdvj</p>
 		</div>
 		<div id="search">
-			<input type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
-	    	<button type="submit" class="btn btn-default">Submit</button>
+			<form action="../php/search.php" method="post">
+				<input name="search" type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
+				<input type="submit" value="search">
+			</form>
 		</div>		
 	</div>
 </div>

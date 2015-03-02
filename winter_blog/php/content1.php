@@ -125,6 +125,8 @@
 	<link rel="stylesheet" href="../css/tab.css">
 	<link rel="stylesheet" href="../css/timeline.css">
 	<script type="text/javascript" src="../js/tab.js"></script>
+  <script type="text/javascript" src="../js/login.js"></script>
+
 </head>
 <body>
 <div id="main">
@@ -155,24 +157,93 @@
 		<div class="body_right2" style="display:block;">
 			<div id="log">
 				<?php 
-					$result = $db->query("SELECT * FROM `blog_content` WHERE `content_id` = '$content_id'");
-					foreach ($result as $value) {   
-						print("<h3>{$value['content_title']}</h3>
-							<p id='p'>");
-					    $content1=$value['content'];   
-					    $current=$_REQUEST['page_t']; 
-					    $result= ff_page($content1,$current);
-					    print("{$result}</p>");
-					}
+          $result = $db->query("SELECT * FROM `blog_content` WHERE `content_id` = '$content_id'");
+          foreach ($result as $value) {   
+            print("<h3>{$value['content_title']}</h3>
+              <p id='p'>");
+              $content1=$value['content'];   
+              $current=$_REQUEST['page_t']; 
+              $result= ff_page($content1,$current);
+              print("{$result}</p>              <span>{$value['time']}</span>
+
+                </div>
+    </div>
+    <div id='search'>
+    <div id='sear'>
+      <input type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
+        <button type='submit' class='btn btn-default'>Submit</button></div>");
+
+          $content_id=$value['content_id'];
+            $content=$value['content'];
+             
+          $result1 = $db->query("SELECT * FROM `discuss` WHERE `content_id` = '$content_id'");
+          foreach ($result1 as $value1) {
+              echo <<<STR
+                <p>{$value1['user_name']}说: {$value1['discuss']}</p><span>{$value1['time']}</span>
+STR;
+          $friend_name=$value1['friend_name'];
+          $discuss_id=$value1['discuss_id'];
+          $result2 = $db->query("SELECT * FROM `reply` WHERE `discuss_id` = '$discuss_id'");
+          foreach ($result2 as $value2) {
+              echo <<<STR
+                  <p>{$value2['user_name']}对{$value2['friend_name']}说: {$value2['reply']}</p><span>{$value2['time']}</span>
+STR;
+}
+              echo <<<STR
+            </div>
+STR;
+}
+              echo <<<STR
+              </div>
+              
+            </div>
+          </div>  
+STR;
+}
+
+
 					?>
 			</div>
 		</div>
-		<div id="search">
-			<input type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
-	    	<button type="submit" class="btn btn-default">Submit</button>
-		</div>		
+		
 	</div>
 </div>
+<div name="login" id="login">
+    <span><a href="index.php">&times;</a></span>
+    <form action="login.php" method="post">
+      <table border=0 width='100%' height='100%'>
+        <tr>
+          <td align='right'>用户ID或者用户名：</td>
+          <td><input type='text' name='user_id'></td>
+        </tr>
+        <tr>
+          <td align='right'>密&nbsp;&nbsp;码：</td>
+          <td><input type='password' name='password'></td>
+        </tr>
+        <tr>
+          <td colspan=2 align='right' class="log"><input type='submit' value='登录'></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div name="regi" id="regi">
+    <span><a href="index.php">&times;</a></span>
+    <form action="register.php" method="post">
+      <table border=0 width='100%' height='100%'>
+        <tr>
+          <td align='right'>用户名：</td>
+          <td><input type='text' name='username'></td>
+        </tr>
+        <tr>
+          <td align='right'>密&nbsp;&nbsp;码：</td>
+          <td><input type='password' name='password'></td>
+        </tr>
+        <tr>
+          <td colspan=2 align='right' class="log"><input type='submit' value='注册'></td>
+        </tr>
+      </table>
+    </form>
+  </div>
 <div id="footer">
 	<p>This is by SkilsLe.</p>
 </div>

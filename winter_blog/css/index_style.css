@@ -133,7 +133,7 @@ textarea {
 }
 
 .discu {
-	margin-left: 45px;
+	/*margin-left: 45px;*/
 	display: none;
 }
 .reply_sub {
@@ -191,4 +191,7 @@ textarea {
 }
 hr {
 	margin: 40px 0px;
+}
+#sear {
+	margin-bottom: 16%;
 }
