@@ -33,9 +33,9 @@
 	<div id="body">
 		<div id="body_left">
 			<ul>
-			<li class="active">主页</li>
+			<li>主页</li>
 			<li>写日志</li>
-			<li>日志管理</li>
+			<li class="active">日志管理</li>
 			<li>好友博客</li>
 			<li>访问统计</li>
 			<li>博客设计</li>
@@ -44,7 +44,7 @@
 		</div>
 		<div class="body_right" style="display:block;">
 			<div class="write">
-				<h4><a class="label label-info" href="">修改</a></h4>
+				<h4><a class="label label-info" href="">修改</a><a style="margin-left:4%;" href="../html/index.php">返回</a></h4>
 				<form action="editPHP.php?content_id=<?php echo $content_id;?>" method = "post">
 					<select class="style" name = "style">
 					  <option value="about study">about study</option>

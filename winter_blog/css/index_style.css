@@ -65,6 +65,8 @@ filter:alpha(opacity=40); */
 #search {
 	float: right;
 	margin: 25px;
+	width: 18%;
+	overflow: hidden;
 }
 #body_left {
 	float: left;
@@ -93,7 +95,7 @@ filter:alpha(opacity=40); */
 } 
 .form-control {
 	display: block;
-	width: 82%;
+	width: 100%;
 	padding: 6px 12px;
 	font-size: 14px;
 	line-height: 1.42857143;
@@ -127,7 +129,7 @@ textarea {
 .reply {
 	border: 1px solid #163473;
 	width: 100%;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .discu {

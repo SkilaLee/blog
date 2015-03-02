@@ -62,7 +62,7 @@
 							<b></b>
 							<h3>{$value['content_title']}</h3>
 STR;
-					print("<p id='p'> ".substr($content,0,80)."<a href='#'>全文<<</a></p>
+					print("<p id='p'> ".substr($content,0,80)."<a href='php/content1.php?content_id=".$value['content_id']."&expert_id=&page_t=1'>全文<<</a></p>
 						</div>
 					</li>");
 							

@@ -33,6 +33,7 @@
 <a class="jiathis_button_weixin"></a>
 <a class="jiathis_button_renren"></a>
 <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
 <a class="jiathis_counter_style"></a>
 </div>
 <script type="text/javascript" >
@@ -41,7 +42,7 @@ var jiathis_config={
 	summary:"你好啊啊啊啊啊",
 	title:"啦啦啦 #xx.blog#",
 	shortUrl:false,
-	hideMore:false
+	hideMore:false;
 }
 
 </script>
@@ -106,8 +107,8 @@ var jiathis_config={
 							<b></b>
 							<h3>{$value['content_title']}</h3>
 STR;
-					print("<p id='p'> ".substr($content,0,80)."<a href='../php/content.php?content_id=".$value['content_id']."&expert_id=&page_t=1'>全文<<</a></p>
-						</div>
+					print("<p id='p'> ".substr($content,0,80));if(strlen($content)>80){ print("<a href='../php/content.php?content_id=".$value['content_id']."&expert_id=&page_t=1'>全文<<</a>");}
+						print("</p></div>
 					</li>");
 							
 					}
@@ -202,7 +203,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -280,7 +280,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -357,7 +356,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -433,7 +431,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -494,7 +491,7 @@ STR;
 								<p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
 STR;
 							if ($user_id==$value1['user_id']) {
-								print("<a href='php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
+								print("<a href='../php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
 							}
 								echo <<<STR
 							<a class="hui" href="#reply">回复</a></span>
@@ -514,7 +511,7 @@ STR;
 									<p>{$value2['user_name']}对{$value2['friend_name']}说: {$value2['reply']}</p><p class="span">
 STR;
 							if ($user_name==$value2['user_name']) {
-								print("<a href='php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
+								print("<a href='../php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
 							}
 								echo <<<STR
 								<a class="hui" href="#reply">回复</a><span>{$value2['time']}</span></p>
@@ -529,7 +526,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -580,7 +576,7 @@ STR;
 								<p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
 STR;
 							if ($user_id==$value1['user_id']) {
-								print("<a href='php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
+								print("<a href='../php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
 							}
 								echo <<<STR
 							<a class="hui" href="#reply">回复</a></span>
@@ -600,7 +596,7 @@ STR;
 									<p>{$value2['user_name']}对{$value2['friend_name']}说: {$value2['reply']}</p><p class="span">
 STR;
 							if ($user_name==$value2['user_name']) {
-								print("<a href='php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
+								print("<a href='../php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
 							}
 								echo <<<STR
 								<a class="hui" href="#reply">回复</a><span>{$value2['time']}</span></p>
@@ -615,7 +611,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -665,7 +660,7 @@ STR;
 								<p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
 STR;
 							if ($user_id==$value1['user_id']) {
-								print("<a href='php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
+								print("<a href='../php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
 							}
 								echo <<<STR
 							<a class="hui" href="#reply">回复</a></span>
@@ -701,7 +696,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>
@@ -752,7 +746,7 @@ STR;
 								<p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
 STR;
 							if ($user_id==$value1['user_id']) {
-								print("<a href='php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
+								print("<a href='../php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
 							}
 								echo <<<STR
 							<a class="hui" href="#reply">回复</a></span>
@@ -772,7 +766,7 @@ STR;
 									<p>{$value2['user_name']}对{$value2['friend_name']}说: {$value2['reply']}</p><p class="span">
 STR;
 							if ($user_name==$value2['user_name']) {
-								print("<a href='php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
+								print("<a href='../php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
 							}
 								echo <<<STR
 								<a class="hui" href="#reply">回复</a><span>{$value2['time']}</span></p>
@@ -787,7 +781,6 @@ STR;
 							echo <<<STR
 						</div>
 STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
 }
 							echo <<<STR
 							</div>

@@ -1,8 +1,5 @@
 <?php 
 	include"../php/connect.php";
-	session_start();
-	$user_id =  $_SESSION['id'];
-	$user_name =  $_SESSION['name'];
     $content_id=$_GET['content_id'];
 	?>
 	<?php    
@@ -127,50 +124,9 @@
 	<link rel="stylesheet" href="../css/index_style.css">
 	<link rel="stylesheet" href="../css/tab.css">
 	<link rel="stylesheet" href="../css/timeline.css">
-	<!-- // <script type="text/javascript" src="../js/tab.js"></script> -->
-
+	<script type="text/javascript" src="../js/tab.js"></script>
 </head>
-<div class="bdsharebuttonbox" data-tag="share_1">
-  <a class="bds_mshare" data-cmd="mshare"></a>
-  <a class="bds_qzone" data-cmd="qzone" href="#"></a>
-  <a class="bds_tsina" data-cmd="tsina"></a>
-  <a class="bds_baidu" data-cmd="baidu"></a>
-  <a class="bds_renren" data-cmd="renren"></a>
-  <a class="bds_tqq" data-cmd="tqq"></a>
-  <a class="bds_more" data-cmd="more">更多</a>
-  <a class="bds_count" data-cmd="count"></a>
-</div>
-<script>
-  window._bd_share_config = {
-    common : {
-      bdText : '自定义分享内容', 
-      bdDesc : '自定义分享摘要', 
-      bdUrl : '自定义分享url地址',   
-      bdPic : '自定义分享图片'
-    },
-    share : [{
-      "bdSize" : 16
-    }],
-    slide : [{     
-      bdImg : 0,
-      bdPos : "right",
-      bdTop : 100
-    }],
-    image : [{
-      viewType : 'list',
-      viewPos : 'top',
-      viewColor : 'black',
-      viewSize : '16',
-      viewList : ['qzone','tsina','huaban','tqq','renren']
-    }],
-    selectShare : [{
-      "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
-    }]
-  }
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
 <body>
-
 <div id="main">
 	<div id="header_out">
 		<div id="header">
@@ -179,11 +135,8 @@
 			</div>
 			<div id="header_right">
 				
-				<li><a href="../php/cancel.php">注销登陆</a></li>
-				<li><a href="#">消息</a></li>
-				<li><a href="#">关于我</a></li>
-				<li><a href="#"><?php echo $user_name;?></a></li>
-				<a href="../php/upload.php"><img src="../php/pic/pic<?php echo $user_id;?>.jpg"  onError="this.src='../php/pic/default.jpg';"/></a>
+				<li><button type="submit" href="#" id="zhuce">注册</button></li>
+        <li><button type="submit" href="#" id="denglu">登陆</button></li>
 			</div>
 		</div>
 	</div>
@@ -209,81 +162,14 @@
 					    $content1=$value['content'];   
 					    $current=$_REQUEST['page_t']; 
 					    $result= ff_page($content1,$current);
-					    print("{$result}</p>              <span>{$value['time']}</span>
-
-                </div>
-    </div>
-    <div id='search'>
-      <input type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
-        <button type='submit' class='btn btn-default'>Submit</button>");
-
-          $content_id=$value['content_id'];
-            $content=$value['content'];
-              echo <<<STR
-            <div class="time" >
-              <a href="#a" class="ping">评论</a>
-              <div name="a" class="discu">
-                <form name="input" action="../php/discuss.php?content_id={$content_id}" method="post">
-                <input type="text" name="discuss" placeholder="{$user_name}说:"/>
-                <input type="submit" value="发表" />
-                </form>
-              </div>
-              <div class="reply">
-STR;
-          $result1 = $db->query("SELECT * FROM `discuss` WHERE `content_id` = '$content_id'");
-          foreach ($result1 as $value1) {
-              echo <<<STR
-                <p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
-STR;
-              if ($user_id==$value1['user_id']) {
-                print("<a href='php/delete_discuss.php?discuss_id={$value1['discuss_id']}'>删除</a>");
-              }
-                echo <<<STR
-              <a class="hui" href="#reply">回复</a></span>
-              <div class="huifu">
-                <div name="reply" class="reply_sub">
-                  <form name="input" action="../php/reply.php?discuss_id={$value1['discuss_id']}&friend_id={$value1['user_id']}" method="post">
-                  <input type="text" name="reply"  placeholder="{$user_name}对{$value1['user_name']}说:"/>
-                  <input type="submit" value="回复"/>
-                </form>
-              </div>
-STR;
-          $friend_name=$value1['friend_name'];
-          $discuss_id=$value1['discuss_id'];
-          $result2 = $db->query("SELECT * FROM `reply` WHERE `discuss_id` = '$discuss_id'");
-          foreach ($result2 as $value2) {
-              echo <<<STR
-                  <p>{$value2['user_name']}对{$value2['friend_name']}说: {$value2['reply']}</p><p class="span">
-STR;
-              if ($user_name==$value2['user_name']) {
-                print("<a href='../php/delete_reply.php?reply_id={$value2['reply_id']}'>删除</a>");
-              }
-                echo <<<STR
-                <a class="hui" href="#reply">回复</a><span>{$value2['time']}</span></p>
-                  <div name="reply" class="reply_sub">
-                  <form name="input" action="../php/reply.php?discuss_id={$discuss_id}&friend_id={$value2['user_id']}" method="post">
-                    <input type="text" name="reply"  placeholder="{$user_name}对{$value2['user_name']}说:"/>
-                    <input type="submit" value="发表"/>
-                  </form>
-                </div>
-STR;
-}
-              echo <<<STR
-            </div>
-STR;
-//难点啊!!!!!到底是对谁说嘛??!!!!
-}
-              echo <<<STR
-              </div>
-              
-            </div>
-          </div>  
-STR;
-}
-
-
+					    print("{$result}</p>");
+					}
 					?>
-			
+			</div>
+		</div>
+		<div id="search">
+			<input type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
+	    	<button type="submit" class="btn btn-default">Submit</button>
 		</div>		
 	</div>
 </div>
