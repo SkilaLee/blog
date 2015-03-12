@@ -159,7 +159,7 @@
 				<?php 
           $result = $db->query("SELECT * FROM `blog_content` WHERE `content_id` = '$content_id'");
           foreach ($result as $value) {   
-            print("<p>{$value['user_name']}:</p><h3>{$value['content_title']}</h3>
+            print("<h3>{$value['content_title']}</h3>
               <p id='p'>");
               $content1=$value['content'];   
               $current=$_REQUEST['page_t']; 
@@ -170,10 +170,8 @@
     </div>
     <div id='search'>
     <div id='sear'>
-      <form action='search1.php' method='post'>
-        <input name='search' type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
-        <input type='submit' value='search'>
-      </form></div>");
+      <input type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
+        <button type='submit' class='btn btn-default'>Submit</button></div>");
 
           $content_id=$value['content_id'];
             $content=$value['content'];
@@ -211,7 +209,7 @@ STR;
 	</div>
 </div>
 <div name="login" id="login">
-    <span><a href="../index.php">&times;</a></span>
+    <span><a href="index.php">&times;</a></span>
     <form action="login.php" method="post">
       <table border=0 width='100%' height='100%'>
         <tr>
@@ -229,7 +227,7 @@ STR;
     </form>
   </div>
   <div name="regi" id="regi">
-    <span><a href="../index.php">&times;</a></span>
+    <span><a href="index.php">&times;</a></span>
     <form action="register.php" method="post">
       <table border=0 width='100%' height='100%'>
         <tr>
@@ -247,7 +245,7 @@ STR;
     </form>
   </div>
 <div id="footer">
-	<p>It is produced by SkilsLe.</p>
+	<p>This is by SkilsLe.</p>
 </div>
 </body>
 </html>

@@ -1,16 +1,13 @@
 #timeline li {
-	/*background: #68e7e0;*/
+	background: #68e7e0;
 	margin-right: 2%;
 	overflow: auto;
 	margin-bottom: 0;
-	margin-left: 2%;
+	margin-left: -5%;
 }
 .container {
-	/*background: #c2edf4;*/
+	background: #c2edf4;
 	overflow: auto;
-	background-image: url(../img/back1.jpg);
-	background-size:100% 100%;
-	margin-bottom: 4%;
 }
 .thumb {
 	float: left;

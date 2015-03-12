@@ -72,10 +72,8 @@ STR;
 			</div>
 		</div>
 		<div id="search">
-			<form action="php/search1.php?expert_id= &page_t=1" method="post">
-				<input name="search" type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
-				<input type="submit" value="search">
-			</form>
+			<input type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
+		    <button type="submit" class="btn btn-default">Submit</button>
 		</div>
 	</div>
 </div>
@@ -114,9 +112,9 @@ STR;
 				</tr>
 			</table>
 		</form>
-	</div><!-- 
+	</div>
 	<div id="footer">
-		It is produced by SkilaLee.
-	</div> -->
+		This is by SkilsLe.
+	</div>
 </body>
 </html>

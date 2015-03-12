@@ -66,15 +66,13 @@ STR;
 			</div>
 		</div>
 		<div id="search">
-			<form action="search.php" method="post">
-				<input name="search" type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
-				<input type="submit" value="search">
-			</form>
+			<input type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
+	    	<button type="submit" class="btn btn-default">Submit</button>
 		</div>		
 	</div>
 </div>
 <div id="footer">
-	<p>It is produced by SkilsLe.</p>
+	<p>This is by SkilsLe.</p>
 </div>
 </body>
 </html>

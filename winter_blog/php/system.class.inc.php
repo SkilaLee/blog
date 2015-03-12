@@ -131,28 +131,28 @@ class SepPage{
 		$this->array=$res->fetchAll(PDO::FETCH_ASSOC);          //获取结果集中的所有数据 
 		$record=count($this->array);              //统计记录总数
 		$pagecount=ceil($record/$this->pagesize);         //计算共有几页
-		$str.=$contentname." ".$record." ".$utits."每页      ".$this->pagesize." ".$utits."第 ".$this->nowpage."   页/共 ".$pagecount."  页";
-		$str.="   ";
+		// $str.=$contentname." ".$record." ".$utits."每页      ".$this->pagesize." ".$utits."第 ".$this->nowpage."   页/共 ".$pagecount."  页";
+		// $str.="   ";
 		if ($this->nowpage!=1) {
-			$str.="<a href=".$_SERVER['PHP_SELF']."?page=1&page_type=".$anothersearchstr."&parameter2=".$anothersearchstrs." class=".$class.">首页</a>";
+			$str.="<a href=".$_SERVER['PHP_SELF']."?page=1&page_type=".$anothersearchstr."&class=".$class.">首页</a>";
 		}else{
 			$str.="<font color='#555555'>首页</font>";
 		}
 		$str.=" ";
 		if ($this->nowpage!=1) {
-			$str.="<a href=".$_SERVER['PHP_SELF']."?page=".($this->nowpage-1).  "&page_type=".$anothersearchstr."&parameter2=".$anothersearchstrs." class=".$class.">上一页</a>";
+			$str.="<a href=".$_SERVER['PHP_SELF']."?page=".($this->nowpage-1).  "&page_type=".$anothersearchstr."&class=".$class.">上一页</a>";
 		}else{
 			$str.="<font color='#555555'>上一页</font>";
 		}
 		$str.=" ";
 		if ($this->nowpage!=$pagecount) {
-			$str.="<a href=".$_SERVER['PHP_SELF']."?page=".($this->nowpage+1).  "&page_type=".$anothersearchstr."&parameter2=".$anothersearchstrs." class=".$class.">下一页</a>";
+			$str.="<a href=".$_SERVER['PHP_SELF']."?page=".($this->nowpage+1).  "&page_type=".$anothersearchstr."&class=".$class.">下一页</a>";
 		}else{
 			$str.="<font color='#555555'>下一页</font>";
 		}
 		$str.=" ";
 		if ($this->nowpage!=$pagecount) {
-			$str.="<a href=".$_SERVER['PHP_SELF']."?page=".$pagecount.  "&page_type=".$anothersearchstr."&parameter2=".$anothersearchstrs." class=".$class.">尾页</a>";
+			$str.="<a href=".$_SERVER['PHP_SELF']."?page=".$pagecount.  "&page_type=".$anothersearchstr."&class=".$class.">尾页</a>";
 		}else{
 			$str.="<font color='#555555'>尾页</font>";
 		}
