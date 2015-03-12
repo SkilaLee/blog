@@ -58,9 +58,15 @@
 		<div class="body_right" style="display:block;">
 			<div class="container">
 				<ul id="timeline" class="timeline">
-												<li class="active">
+					<li class="active">
+						<!-- <div class="layer">
+								
+						</div> -->
 						<div class="thumb">
-							<span>2015-02-20 08:08:08</span>
+							<div>
+								<span>2015-02-20 08:08:08</span>
+							</div>
+							
 						</div>
 						<s class="check">
 						</s>
@@ -76,8 +82,13 @@
 							$content=$value['content'];
 							echo <<<STR
 							<li class="active">
+							
 						<div class="thumb">
-							<span>{$value['time']}</span>
+
+							<div>
+								<span>{$value['time']}</span>
+							</div>
+							
 						</div>
 						<s class="check">
 						</s>
@@ -90,7 +101,25 @@ STR;
 					</li>");
 							
 					}
-					 ?>					
+					 ?>		
+					 <li>
+						<!-- <div class="layer">
+								
+						</div> -->
+						<div class="thumb">
+							<div>
+								<span><?php date_default_timezone_set('PRC'); echo date('Y-m-d H:i:s',time());?></span>
+							</div>
+							
+						</div>
+						<s class="check">
+						</s>
+						<div class="timeline_content">
+							<b></b>
+							<h3>结束</h3>
+							<p id="p">没有喽</p>
+						</div>
+					</li>			
 				</ul>
 			</div>
 		</div>
@@ -791,7 +820,7 @@ STR;
 	</div>
 </div>
 <div id="footer">
-	<p>This is by SkilsLe.</p>
+	<p>It is produced by SkilsLe.</p>
 </div>
 </body>
 </html>

@@ -1,14 +1,14 @@
 #div1 .active {
-	background: #0def82;
+	background: #4BC0DB;
 }
 #div2 .active {
-	background: #0def82;
+	background: #36AFE4;
 }
 #div1 input,#div2 input {
-	background: #95a8dc;
+	background: #92CBC0;
 	width: 100px;
 	height: 45px;
-	margin: 0px 21px;
+	margin: 0px 13px;
 }
 
 #body_left .active {
@@ -20,7 +20,7 @@
 }
 .body_right2 {
 	margin-top: 25px;
-	width: 75%;
+	width: 67%;
 	margin-left: 2%;
 	float: left;
 }
