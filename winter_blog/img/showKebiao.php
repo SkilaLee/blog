@@ -1,0 +1,30 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="css/common.css" rel="stylesheet" type="text/css" media="screen" />
+		<title>重庆邮电大学 选课系统</title>   
+	</head>
+	<body>
+		<p style='color:red'>注：课程安排可能会因为各种原因有细微调整，请在新学期开学上课前上教务在线进行查询！</p><table class='pTable'><thead ><tr ><td>&nbsp;</td><td style='text-align:center'>星期一</td><td style='text-align:center'>星期二</td><td style='text-align:center'>星期三</td><td style='text-align:center'>星期四 </td><td style='text-align:center'>星期五</td><td style='text-align:center'>星期六</td><td style='text-align:center'>星期日</td></tr></thead><tr style='text-align:center'><td style='font-weight:bold;'>1、2</td><td >A04278408<br>(040415)概率论与数理统计
+				<br><span style="font-weight:bolder">教师：罗燕</span><br>1-16周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >A04106209<br>(070112)中国近现代史纲要
+				<br><span style="font-weight:bolder">教师：杨雯</span><br>1-16周<font color=#336699></font><br><span style='color:#0000FF'>必修</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >S36676578<br>(021107)物理实验(上)
+				<br><span style="font-weight:bolder">教师：冯春宝</span><br>2周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>独立实验(实践)</span>）（<span style='color:#008000'>正常</span>）<hr>S36676578<br>(021107)物理实验(上)
+				<br><span style="font-weight:bolder">教师：</span><br>2-16周双周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>独立实验(实践)</span>）（<span style='color:#008000'>正常</span>）</td><td ></td><td >A04157584<br>(040402)高等数学(下)
+				<br><span style="font-weight:bolder">教师：严单贵</span><br>1-15周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td ></td><td ></td></tr><tr style='text-align:center'><td style='font-weight:bold;'>3、4</td><td >A04341936<br>(090110)体育（2）乒乓球三班
+				<br><span style="font-weight:bolder">教师：教师4   </span><br>1-16周<font color=#336699></font><br><span style='color:#0000FF'>必修</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >S36674472<br>(041201)集中上机(C语言)
+				<br><span style="font-weight:bolder">教师：李红娟</span><br>6周,13周<font color=#336699></font><br><span style='color:#0000FF'>实践</span>（<span style='color:#0000FF'>独立实验(实践)</span>）（<span style='color:#008000'>正常</span>）</td><td >A04157584<br>(040402)高等数学(下)
+				<br><span style="font-weight:bolder">教师：严单贵</span><br>1-15周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >A04908998<br>(050142)大学英语2(视听说)
+				<br><span style="font-weight:bolder">教师：蔡雨秋  </span><br>1-16周<font color=#336699></font><br><span style='color:#0000FF'>必修</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >A04342821<br>(020117)大学物理(上)
+				<br><span style="font-weight:bolder">教师：柴昭</span><br>1-17周单周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td ></td><td ></td></tr><tr style='text-align:center'><td style='font-weight:bold;'>5、6</td><td >A04157584<br>(040402)高等数学(下)
+				<br><span style="font-weight:bolder">教师：严单贵</span><br>1-15周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td></tr><tr style='text-align:center'><td style='font-weight:bold;'>7、8</td><td ></td><td >A04057433<br>(050143)大学英语2(读写译)
+				<br><span style="font-weight:bolder">教师：蔡雨秋  </span><br>1-16周<font color=#336699></font><br><span style='color:#0000FF'>必修</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >A04342821<br>(020117)大学物理(上)
+				<br><span style="font-weight:bolder">教师：柴昭</span><br>1-16周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >A04278408<br>(040415)概率论与数理统计
+				<br><span style="font-weight:bolder">教师：罗燕</span><br>1-17周单周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td >A04960403<br>(070107)形势与政策
+				<br><span style="font-weight:bolder">教师：王贵喜</span><br>11-14周<font color=#336699></font><br><span style='color:#0000FF'>必修</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td ></td><td ></td></tr><tr style='text-align:center'><td style='font-weight:bold;'>9、10</td><td ></td><td >RX1243680<br>(121412)绘画艺术鉴赏
+				<br><span style="font-weight:bolder">教师：段皎</span><br>9-16周<font color=#336699></font><br><span style='color:#0000FF'>任选</span>（<span style='color:#0000FF'>人文素质</span>）（<span style='color:#008000'>正常</span>）</td><td >A04408977<br>(040150)专业发展概论
+				<br><span style="font-weight:bolder">教师：尚凤军  </span><br>1-8周<font color=#336699></font><br><span style='color:#0000FF'>限选</span>（<span style='color:#0000FF'>理论专业</span>）（<span style='color:#008000'>正常</span>）</td><td ></td><td ></td><td ></td><td ></td></tr><tr style='text-align:center'><td style='font-weight:bold;'>11、12</td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td></tr></table>	</body>
+</html>

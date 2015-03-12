@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>write</title>
+	<link rel="stylesheet" href="../css/write_style.css">
+</head>
+<body>
+	<form action="php/sendMessage.php" method = "post">
+		<select class="style" name = "style">
+		  <option value="0">about study</option>
+		  <option value="1">about mood</option>
+		  <option value="2">Video</option>
+		  <option value="3">Music</option>
+		</select>
+		<input type="text" name="fname" />
+		<textarea  name = "message" class="form-control" rows="4"></textarea>
+		<button type="submit" class="sublime">提交</button>
+	</form>
+</body>
+</html>

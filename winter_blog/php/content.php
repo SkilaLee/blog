@@ -180,10 +180,11 @@
 </script>
 </head>
 
-<body>
+<body style="background-image: url(../img/background.jpg);background-size:100% 100%;">
 
-<div id="main">
-	<div id="header_out">
+<div id="main" style="background:none;">
+	<div id="header_out" style="background-image: url(../img/xiaoge.png);
+  background-repeat:no-repeat;">
 		<div id="header">
 			<div id="header_left">
 				<h1>blog</h1>
@@ -192,7 +193,7 @@
 				
 				<li><a href="../php/cancel.php">注销登陆</a></li>
 				<li><a href="#">消息</a></li>
-				<li><a href="#">关于我</a></li>
+				<li><a href="../html/index.php">关于我</a></li>
 				<li><a href="#"><?php echo $user_name;?></a></li>
 				<a href="../php/upload.php"><img src="../php/pic/pic<?php echo $user_id;?>.jpg"  onError="this.src='../php/pic/default.jpg';"/></a>
 			</div>
@@ -224,10 +225,12 @@
 
                 </div>
     </div>
-    <div id='search'>
+    <div id='search' style='width:25%;'>
     <div id='sear'>
-      <input type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
-      <button type='submit' class='btn btn-default'>Submit</button></div>");
+      <form action='search.php?expert_id= &page_t=1' method='post'>
+        <input name='search' type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
+        <input type='submit' value='search'>
+      </form>");
           $content_id=$value['content_id'];
             $content=$value['content'];
               echo <<<STR
@@ -299,7 +302,7 @@ STR;
 	</div>
 </div>
 <div id="footer">
-	<p>This is by SkilsLe.</p>
+	<span>It is produced by SkilsLe.</p>
 </div>
 </body>
 </html>

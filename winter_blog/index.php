@@ -72,8 +72,10 @@ STR;
 			</div>
 		</div>
 		<div id="search">
-			<input type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
-		    <button type="submit" class="btn btn-default">Submit</button>
+			<form action="php/search1.php?expert_id= &page_t=1" method="post">
+				<input name="search" type="text" class="form-control" placeholder="请按Ctrl+F键,谢谢">
+				<input type="submit" value="search">
+			</form>
 		</div>
 	</div>
 </div>
@@ -112,9 +114,9 @@ STR;
 				</tr>
 			</table>
 		</form>
-	</div>
+	</div><!-- 
 	<div id="footer">
-		This is by SkilsLe.
-	</div>
+		It is produced by SkilaLee.
+	</div> -->
 </body>
 </html>
