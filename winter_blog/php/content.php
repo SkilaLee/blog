@@ -194,7 +194,7 @@
 				<li><a href="../php/cancel.php">注销登陆</a></li>
 				<li><a href="#">消息</a></li>
 				<li><a href="../html/index.php">关于我</a></li>
-				<li><a href="#"><?php echo $user_name;?></a></li>
+				<li><a href="../html/index.php"><?php echo $user_name;?></a></li>
 				<a href="../php/upload.php"><img src="../php/pic/pic<?php echo $user_id;?>.jpg"  onError="this.src='../php/pic/default.jpg';"/></a>
 			</div>
 		</div>

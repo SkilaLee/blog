@@ -30,7 +30,7 @@
   <div id="body" class="body">
     <div id="body_left" style="padding-left:2%;" name="a">
       
-      <h4><?php echo $searchs;?></h4><span style="color: #BBDABA;">的搜索结果是:</span>
+      <h4><?php echo $searchs;?></h4><span style="color: #4A75E5;">的搜索结果是:</span>
       <form action='#' method='post' id="form">
         <input name='search' type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
         <input type='submit' value='search'>
@@ -96,7 +96,7 @@ $j=0;
 
 
               print("
-                    <div id='search' style='width:23%;'>
+                    <div id='search' style='width:23%;margin:15px 0px;'>
                      
                     <div class='reply'>");
           $content_id=$value['content_id'];

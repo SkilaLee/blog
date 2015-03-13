@@ -70,7 +70,7 @@
         <li><a href="php/cancel.php">注销登陆</a></li>
         <li><a href="#">消息</a></li>
         <li><a href="#">关于我</a></li>
-        <li><a href="#"><?php echo $user_name;?></a></li>
+        <li><a href="../html/index.php"><?php echo $user_name;?></a></li>
         <a href="../php/upload.php"><img src="../php/pic/pic<?php echo $user_id;?>.jpg"  onError="this.src='../php/pic/default.jpg';"/></a>
       </div>
     </div>
@@ -78,11 +78,11 @@
   
   <div id="body" class="body">
     <div id="body_left" style="padding-left:2%;">
+      <h4><?php echo $searchs;?></h4><span style="color: #4A75E5;">的搜索结果是:</span>
       <form action='#' method='post' id="form">
         <input name='search' type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
         <input type='submit' value='search'>
       </form>
-      <h4><?php echo $searchs;?></h4><span style="color: #BBDABA;">的搜索结果是:</span>
     </div>
     <div class="body_rightAll">
       
@@ -94,6 +94,7 @@ $result=$db->query("SELECT * FROM `blog_content` WHERE content like '%$searchs%'
             // $sear4="";
             // $sear5="";
 $i=0;
+$j=0;
            foreach ($result as $value) {   
             $i++;
            print("<div class='right_search_content'><div class='search_content'><h3>{$value['content_title']}</h3>
@@ -128,12 +129,9 @@ $i=0;
 //             echo $sear2.$sear3.$sear4.$sear5;
 //           }
               print("
-              <div id='search' style='width:23%;'>
+              <div id='search' style='width:23%;margin:15px 0px;'>
     <div id='sear'>
-      <form action='search.php?expert_id= &page_t=1' method='post'>
-        <input name='search' type='text' class='form-control' placeholder='请按Ctrl+F键,谢谢'>
-        <input type='submit' value='search'>
-      </form>");
+      ");
           $content_id=$value['content_id'];
             $content=$value['content'];
               echo <<<STR
@@ -149,6 +147,7 @@ $i=0;
 STR;
           $result1 = $db->query("SELECT * FROM `discuss` WHERE `content_id` = '$content_id'");
           foreach ($result1 as $value1) {
+            $j++;
               echo <<<STR
                 <p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}
 STR;
@@ -189,6 +188,10 @@ STR;
             </div>
 STR;
 //难点啊!!!!!到底是对谁说嘛??!!!!
+}
+
+if ($j==0) {
+  echo "还没有评论哦~";
 }
               echo <<<STR
               </div>
@@ -245,8 +248,8 @@ STR;
  } 
  SearchHighlight("body",'<?php echo $searchs;?>'); 
  </script> 
-<div id="footer">
+<!-- <div id="footer">
   <span>It is produced by SkilaLee.</span>
-</div>
+</div> -->
 </body>
 </html>
