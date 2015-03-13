@@ -211,9 +211,9 @@ STR;
 	</div>
 </div>
 <div name="login" id="login">
-    <span><a href="../index.php">&times;</a></span>
+    <span><a href="# "  onclick="location.reload()">&times;</a></span>
     <form action="login.php" method="post">
-      <table border=0 width='100%' height='100%'>
+      <table border=0 width='100%' >
         <tr>
           <td align='right'>用户ID或者用户名：</td>
           <td><input type='text' name='user_id'></td>
@@ -229,7 +229,7 @@ STR;
     </form>
   </div>
   <div name="regi" id="regi">
-    <span><a href="../index.php">&times;</a></span>
+    <span><a href="# "  onclick="location.reload()">&times;</a></span>
     <form action="register.php" method="post">
       <table border=0 width='100%' height='100%'>
         <tr>
@@ -245,9 +245,9 @@ STR;
         </tr>
       </table>
     </form>
-  </div>
+  </div><!-- 
 <div id="footer">
 	<p>It is produced by SkilsLe.</p>
-</div>
+</div> -->
 </body>
 </html>

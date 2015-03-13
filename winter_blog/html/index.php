@@ -134,7 +134,7 @@ STR;
 					  <option value="about music">about music</option>
 					</select>
 					<input type="text" name="title" placeholder="标题"/>
-					<textarea  name = "message" class="form-control" rows="29" placeholder="正文"></textarea>
+					<textarea  name = "message" class="form-control" rows="29" placeholder="正文" style="width: 100%;"></textarea>
 					<button type="submit" class="sublime">提交</button>
 				</form>
 			</div>
@@ -818,9 +818,9 @@ STR;
 			</form>
 		</div>		
 	</div>
-</div>
+</div><!-- 
 <div id="footer">
 	<p>It is produced by SkilsLe.</p>
-</div>
+</div> -->
 </body>
 </html>

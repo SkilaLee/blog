@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/index_style.css">
   <link rel="stylesheet" href="../css/tab.css">
   <link rel="stylesheet" href="../css/timeline.css">
+    <script type="text/javascript" src="../js/login.js"></script>
 </head>
 <body>
 <div id="main">
@@ -27,7 +28,7 @@
     </div>
   </div>
   <div id="body" class="body">
-    <div id="body_left" style="padding-left:2%;">
+    <div id="body_left" style="padding-left:2%;" name="a">
       
       <h4><?php echo $searchs;?></h4><span style="color: #BBDABA;">的搜索结果是:</span>
       <form action='#' method='post' id="form">
@@ -83,6 +84,7 @@ $result=$db->query("SELECT * FROM `blog_content` WHERE content like '%$searchs%'
           
 
 $i=0;
+$j=0;
            foreach ($result as $value) {   
             $i++;
            print("<div class='right_search_content'>
@@ -101,6 +103,7 @@ $i=0;
             $content=$value['content'];
           $result1 = $db->query("SELECT * FROM `discuss` WHERE `content_id` = '$content_id'");
           foreach ($result1 as $value1) {
+                          $j++;
               echo <<<STR
                 <p>{$value1['user_name']}说: {$value1['discuss']}</p><span class="span">{$value1['time']}               </span>
               <div class="huifu">
@@ -119,6 +122,9 @@ STR;
             </div>
 STR;
 }
+if ($j==0) {
+  echo "还没有评论哦~";
+}
               echo <<<STR
               </div>
               
@@ -130,8 +136,6 @@ STR;
          echo "没有搜索到".$searchs."的相关日志";
         }
           
-
-
 ?>
       
     </div>
@@ -175,8 +179,45 @@ STR;
  } 
  SearchHighlight("body",'<?php echo $searchs;?>'); 
  </script> 
+
+ <div name="login" id="login">
+    <span><a href="#" onclick="location.reload()">&times;</a></span>
+    <form action="../php/login.php" method="post">
+      <table border=0 width='100%' height='100%'>
+        <tr>
+          <td align='right'>用户ID或者用户名：</td>
+          <td><input type='text' name='user_id'></td>
+        </tr>
+        <tr>
+          <td align='right'>密&nbsp;&nbsp;码：</td>
+          <td><input type='password' name='password'></td>
+        </tr>
+        <tr>
+          <td colspan=2 align='right' class="log"><input type='submit' value='登录'></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div name="regi" id="regi">
+    <span><a href="#" onclick="location.reload()">&times;</a></span>
+    <form action="../php/register.php" method="post">
+      <table border=0 width='100%' height='100%'>
+        <tr>
+          <td align='right'>用户名：</td>
+          <td><input type='text' name='username'></td>
+        </tr>
+        <tr>
+          <td align='right'>密&nbsp;&nbsp;码：</td>
+          <td><input type='password' name='password'></td>
+        </tr>
+        <tr>
+          <td colspan=2 align='right' class="log"><input type='submit' value='注册'></td>
+        </tr>
+      </table>
+    </form>
+  </div><!-- 
 <div id="footer">
   <span>It is produced by SkilaLee.</span>
-</div>
+</div> -->
 </body>
 </html>

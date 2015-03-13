@@ -109,7 +109,7 @@ a {
 } 
 .form-control {
 	display: block;
-	width: 87%;
+	width: 98%;
 	padding: 6px 12px;
 	font-size: 14px;
 	line-height: 1.42857143;
@@ -129,17 +129,17 @@ textarea {
 	border: 1px solid #0d3689;
 	overflow: auto;
 	display: none;
-	/*background: #68e7e0;*/
+	background: #9FD4EF;
 	background-size: 100% 190%;
-	background-image: url(../img/back1.jpg);
-}
+	/*background-image: url(../img/back1.jpg);
+}*/
 .jour {
 	border: 1px solid #0d3689;
 	overflow: auto;
 	/*background: #68e7e0;*/
 }
 .jour p {
-	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#000));
+	
 }
 .content {
 	margin-left: 7%;
